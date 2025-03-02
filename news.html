@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsSTALK | Your Real-Time News Feed</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>NewsStalk <i class="fas fa-newspaper"></i></h1>
+        <p class="app-subtitle">Stay informed with the latest headlines</p>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="What news are you looking for today?">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div class="category-filters">
+            <button class="category-btn active" data-category="general">All News</button>
+            <button class="category-btn" data-category="business">Business</button>
+            <button class="category-btn" data-category="technology">Technology</button>
+            <button class="category-btn" data-category="sports">Sports</button>
+            <button class="category-btn" data-category="science">Science</button>
+            <button class="category-btn" data-category="health">Health</button>
+            <button class="category-btn" data-category="entertainment">Entertainment</button>
+            <button class="category-btn" data-category="politics">Politics</button>
+        </div>
+        
+        <div id="loader" class="loader">
+            <div class="loader-circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="loader-text">Finding the latest headlines for you...</p>
+        </div>
+        
+        <div id="error-message" class="error-message">
+            <i class="fas fa-exclamation-circle error-icon"></i>
+            <p>Oops! Failed to load news. Please try again later.</p>
+        </div>
+        
+        <div id="news-container" class="news-container">
+            <!-- Skeleton loading cards -->
+            <div class="news-card skeleton-card skeleton"></div>
+            <div class="news-card skeleton-card skeleton"></div>
+            <div class="news-card skeleton-card skeleton"></div>
+            <div class="news-card skeleton-card skeleton"></div>
+            <div class="news-card skeleton-card skeleton"></div>
+            <div class="news-card skeleton-card skeleton"></div>
+        </div>
+        
+        <div class="load-more-container">
+            <button id="load-more" class="load-more">Load More <i class="fas fa-chevron-down"></i></button>
+        </div>
+    </div>
+
+    <script src="news.js"></script>
+</body>
+</html>
